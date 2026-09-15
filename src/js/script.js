@@ -1310,8 +1310,9 @@ if (carouselPause) {
                     "false"
                 );
 
-                carouselPause.textContent =
-                    "⏸";
+                carouselPause.classList.remove(
+                    "playing"
+                );
 
                 carouselPause.setAttribute(
                     "aria-label",
@@ -1327,8 +1328,9 @@ if (carouselPause) {
                     "true"
                 );
 
-                carouselPause.textContent =
-                    "⏵";
+                carouselPause.classList.add(
+                    "playing"
+                );
 
                 carouselPause.setAttribute(
                     "aria-label",
