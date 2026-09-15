@@ -1,0 +1,3402 @@
+/* =========================================================
+    RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- HTML ----- */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- BODY ----- */
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background-color: #090909;
+    background-image: url("../img/background.png");
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+    INTRO
+========================================================= */
+
+/* ----- ESTRUTURA ----- */
+
+#intro {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+    transition: opacity .8s ease;
+}
+
+/* ----- ESTADO OCULTO ----- */
+
+#intro.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ------------------------------
+    VÍDEO DE FUNDO
+------------------------------ */
+
+/* ----- VÍDEO ----- */
+
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ----- OVERLAY ----- */
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+}
+
+/* ------------------------------
+    CONTEÚDO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.intro-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 900px;
+    padding: 2rem;
+}
+
+/* ----- TÍTULO ----- */
+
+.intro-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: .95;
+}
+
+/* ----- PRIMEIRA LINHA ----- */
+
+.intro-title span:first-child {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+}
+
+/* ----- ÚLTIMA LINHA ----- */
+
+.intro-title span:last-child {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 900;
+}
+
+/* ----- SUBTÍTULO ----- */
+
+.intro-content h2 {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    opacity: .9;
+}
+
+/* ----- DESCRIÇÃO ----- */
+
+.intro-content p {
+    margin: 2rem auto;
+    max-width: 700px;
+    line-height: 1.7;
+    font-size: 1.1rem;
+    opacity: .85;
+}
+
+/* ----- HINT ----- */
+
+.hint {
+    opacity: .65;
+    font-size: .9rem;
+    animation: pulse 2s infinite;
+}
+
+/* ----- ANIMAÇÃO DO HINT ----- */
+
+@keyframes pulse {
+
+    50% {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+    NAVBAR
+========================================================= */
+
+/* ----- ESTRUTURA ----- */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(9, 9, 9, .85);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+}
+
+/* ----- LOGO ----- */
+
+.logo {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+/* ----- BOTÃO MENU MOBILE ----- */
+
+.menu-toggle {
+
+    display: none;
+
+}
+
+/* ------------------------------
+    NAVEGAÇÃO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.navbar nav {
+    display: flex;
+    gap: 2rem;
+}
+
+/* ----- LINKS ----- */
+
+.navbar nav a {
+    text-decoration: none;
+    color: white;
+    font-size: .95rem;
+    transition: .3s;
+}
+
+/* ----- HOVER ----- */
+
+.navbar nav a:hover {
+    opacity: .7;
+}
+
+
+/* =========================================================
+    ÍCONE DO PROJETO
+========================================================= */
+
+/* ----- CONTAINER ----- */
+
+.project-icon {
+    position: relative;
+    width: 100%;
+    height: 0;
+    z-index: 10;
+}
+
+/* ----- IMAGEM ----- */
+
+.project-icon img {
+    position: absolute;
+    top: 20px;
+    left: 3%;
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+}
+
+
+/* =========================================================
+    HERO
+========================================================= */
+
+/* ----- ESTRUTURA ----- */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 8%;
+    overflow: hidden;
+}
+
+/* ------------------------------
+    CONTEÚDO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+/* ----- TEXTO ----- */
+
+.hero-text {
+    flex: 1;
+}
+
+/* ----- TÍTULO ----- */
+
+.hero-text h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    margin-bottom: 1.5rem;
+}
+
+/* ----- DESCRIÇÃO ----- */
+
+.hero-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    opacity: .85;
+}
+
+/* ----- IMAGEM ----- */
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =========================================================
+    SEÇÕES
+========================================================= */
+
+/* ----- ESTRUTURA ----- */
+
+.section {
+    padding: 8rem 8%;
+}
+
+/* ----- TÍTULO ----- */
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* ------------------------------
+    CARDS
+------------------------------ */
+
+/* ----- GRID ----- */
+
+.cards {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* ----- CARD ----- */
+
+.card {
+    background: rgba(255, 105, 180, 0.08);
+    border: 1px solid rgba(255, 105, 180, 0.18);
+    border-radius: 24px;
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: .3s;
+}
+
+/* ----- HOVER ----- */
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* ----- TÍTULO ----- */
+
+.card h3 {
+    margin-bottom: 1rem;
+}
+
+/* ----- TEXTO ----- */
+
+.card p {
+    line-height: 1.7;
+    opacity: .85;
+}
+
+/* =========================================================
+    CARROSSEL
+========================================================= */
+
+/* ------------------------------
+    ESTRUTURA
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.carousel {
+
+    position: relative;
+
+    width: min(1200px, 100%);
+
+    margin: 2rem auto 0;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    perspective: 1200px;
+
+}
+
+
+/* ----- VIEWPORT ----- */
+
+.carousel-viewport {
+
+    position: relative;
+
+    width: 100%;
+    height: 520px;
+
+    overflow: hidden;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+}
+
+
+/* ----- TRILHO ----- */
+
+.carousel-track {
+
+    display: flex;
+    align-items: center;
+
+    height: 520px;
+
+    touch-action: pan-y pinch-zoom;
+
+    background: transparent;
+
+}
+
+
+/* ------------------------------
+    SLIDES
+------------------------------ */
+
+/* ----- SLOT ----- */
+
+.carousel-slot {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 360px;
+
+    width: 360px;
+    height: 520px;
+
+    margin-right: 2rem;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+
+    overflow: visible;
+
+}
+
+
+/* ------------------------------
+    CARDS
+------------------------------ */
+
+/* ----- CARD ----- */
+
+.carousel-card {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    width: 360px;
+    height: 500px;
+
+    flex: 0 0 360px;
+
+    overflow: hidden;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, .075),
+            rgba(255, 255, 255, .025));
+
+    border:
+        1px solid rgba(255, 255, 255, .1);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .25);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    isolation: isolate;
+
+    opacity: .45;
+
+    filter:
+        saturate(.7) brightness(.78);
+
+    transform: scale(.82);
+
+    transition:
+        transform .45s cubic-bezier(.22, 1, .36, 1),
+        opacity .45s ease,
+        filter .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease;
+
+}
+
+
+/* ----- BRILHO ----- */
+
+.carousel-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 3;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(135deg,
+            rgba(255, 255, 255, .08),
+            transparent 35%,
+            transparent 70%,
+            rgba(180, 90, 255, .04));
+
+}
+
+
+/* ----- BORDA ILUMINADA ----- */
+
+.carousel-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    border-radius: inherit;
+
+    border:
+        1px solid rgba(190, 100, 255, .35);
+
+    opacity: 0;
+
+    transition:
+        opacity .45s ease;
+
+}
+
+
+/* ------------------------------
+    IMAGEM
+------------------------------ */
+
+/* ----- IMAGEM ----- */
+
+.carousel-card img {
+
+    position: relative;
+
+    z-index: 1;
+
+    display: block;
+
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    background:
+        linear-gradient(135deg,
+            rgba(130, 50, 190, .12),
+            rgba(20, 10, 30, .5));
+
+    transition:
+        transform .7s cubic-bezier(.22, 1, .36, 1),
+        filter .5s ease;
+
+}
+
+
+/* ----- OVERLAY ----- */
+
+.carousel-card .image-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(to bottom,
+            transparent 50%,
+            rgba(10, 5, 20, .55) 100%);
+
+}
+
+
+/* ------------------------------
+    ESTADOS
+------------------------------ */
+
+/* ----- CARD CENTRAL ----- */
+
+.carousel-card.active {
+
+    opacity: 1;
+
+    filter: none;
+
+    transform: scale(1);
+
+    z-index: 10;
+
+    border-color:
+        rgba(190, 100, 255, .35);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .4),
+        0 0 45px rgba(150, 60, 230, .16);
+
+}
+
+
+/* ----- BORDA CENTRAL ----- */
+
+.carousel-card.active::after {
+
+    opacity: 1;
+
+}
+
+
+/* ----- CARD LATERAL ----- */
+
+.carousel-card.side {
+
+    opacity: .55;
+
+    filter:
+        saturate(.75) brightness(.8);
+
+    transform: scale(.82);
+
+    z-index: 5;
+
+}
+
+
+/* ------------------------------
+    CONTEÚDO
+------------------------------ */
+
+/* ----- TÍTULO ----- */
+
+.carousel-card h3 {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin: 0;
+
+    padding:
+        1.25rem 1.25rem .55rem;
+
+    color: #ffffff;
+
+    font-size: 1.25rem;
+
+    line-height: 1.2;
+
+    font-weight: 650;
+
+}
+
+
+/* ----- TÍTULO CENTRAL ----- */
+
+.carousel-card.active h3 {
+
+    padding-top: 1.4rem;
+
+    font-size: 1.45rem;
+
+}
+
+
+/* ----- DESCRIÇÃO ----- */
+
+.carousel-card p {
+
+    position: relative;
+
+    z-index: 5;
+
+    margin: 0;
+
+    padding:
+        .25rem 1.25rem 1.25rem;
+
+    color:
+        rgba(255, 255, 255, .68);
+
+    font-size: .92rem;
+
+    line-height: 1.65;
+
+}
+
+
+/* ----- FONTE ----- */
+
+.carousel-card .carousel-source {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    width: fit-content;
+
+    margin:
+        auto 1.25rem 1.25rem;
+
+    padding:
+        .45rem .75rem;
+
+    border:
+        1px solid rgba(255, 255, 255, .07);
+
+    border-radius: 999px;
+
+    background:
+        rgba(255, 255, 255, .045);
+
+    color:
+        rgba(255, 255, 255, .55);
+
+    font-size: .72rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        color .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
+
+}
+
+
+.carousel-card .carousel-source:hover {
+
+    color: #ffffff;
+
+    background:
+        rgba(170, 80, 255, .12);
+
+    border-color:
+        rgba(180, 90, 255, .25);
+
+    transform:
+        translateY(-2px);
+
+}
+
+/* ------------------------------
+   AVISO DE IA
+------------------------------ */
+
+.ai-disclaimer {
+
+    width: 100%;
+
+    margin: .5rem 0 .8rem;
+
+    color: #888;
+
+    font-size: .7rem;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+}
+
+/* ------------------------------
+   CONTROLES
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.carousel-controls {
+
+    position: relative;
+
+    z-index: 20;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: .5rem;
+
+    width: 100%;
+
+    margin-top: .5rem;
+
+}
+
+
+/* ------------------------------
+   NAVEGAÇÃO
+------------------------------ */
+
+/* ----- CONTAINER DOS BOTÕES ----- */
+
+.carousel-navigation {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 1rem;
+
+}
+
+
+/* ----- BOTÕES ----- */
+
+.carousel-navigation button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 40px;
+
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ff4fd8;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.8rem;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    text-shadow:
+        0 0 6px rgba(255, 79, 216, .8),
+        0 0 14px rgba(255, 79, 216, .5);
+
+    transition:
+        transform .25s ease,
+        color .25s ease,
+        text-shadow .25s ease;
+
+}
+
+
+/* ----- SÍMBOLOS ----- */
+
+.carousel-navigation button span {
+
+    position: relative;
+
+    top: 0;
+
+}
+
+
+/* ----- HOVER ----- */
+
+.carousel-navigation button:hover {
+
+    transform: scale(1.15);
+
+    color: #ffffff;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, .9),
+        0 0 18px rgba(255, 79, 216, .8);
+
+}
+
+
+/* ----- CLIQUE ----- */
+
+.carousel-navigation button:active {
+
+    transform: scale(.95);
+
+}
+
+
+/* ------------------------------
+   CONTADOR
+------------------------------ */
+
+/* ----- CONTADOR ----- */
+
+.carousel-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-width: 60px;
+
+    margin: 0;
+
+    color:
+        rgba(255, 255, 255, .75);
+
+    font-size: .95rem;
+
+    line-height: 1;
+
+}
+
+
+/* =========================================================
+    CURIOSIDADES
+========================================================= */
+
+/* ----- SEÇÃO ----- */
+
+#curiosidades {
+    position: relative;
+    overflow: hidden;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/* ----- TÍTULO ----- */
+
+#curiosidades h2 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    text-shadow:
+        0 0 20px rgba(170, 80, 255, .25);
+}
+
+/* ----- LINHA DECORATIVA ----- */
+
+#curiosidades h2::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 3px;
+    margin: 1rem auto 0;
+    border-radius: 999px;
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(180, 90, 255, .9),
+            transparent);
+    box-shadow:
+        0 0 15px rgba(170, 70, 255, .6);
+}
+
+/* =========================================================
+    SOBRE
+========================================================= */
+
+/* ----- CONTAINER ----- */
+
+.about {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* ----- TEXTO ----- */
+
+.about p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+    opacity: .85;
+}
+
+
+/* =========================================================
+    VÍDEO HERO / MODAL YOUTUBE
+========================================================= */
+
+/* ------------------------------
+    VÍDEO
+------------------------------ */
+
+/* ----- QUADRO DO VÍDEO ----- */
+
+.video-frame {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 16 / 9;
+    border: 1px solid rgba(255, 105, 180, .22);
+    border-radius: 28px;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    background:
+        linear-gradient(135deg,
+            rgba(255, 105, 180, .10),
+            rgba(255, 105, 180, .03));
+    box-shadow:
+        0 20px 50px rgba(255, 105, 180, .18),
+        0 0 0 1px rgba(255, 105, 180, .08),
+        0 0 40px rgba(255, 105, 180, .12);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+}
+
+/* ----- HOVER DO VÍDEO ----- */
+
+.video-frame:hover {
+    transform:
+        translateY(-6px) scale(1.01);
+    border-color:
+        rgba(255, 105, 180, .40);
+    box-shadow:
+        0 28px 60px rgba(255, 105, 180, .22),
+        0 0 0 1px rgba(255, 105, 180, .14),
+        0 0 60px rgba(255, 105, 180, .18);
+}
+
+/* ----- CAPA ----- */
+
+.video-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ----- OVERLAY ----- */
+
+.video-frame-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top,
+            rgba(0, 0, 0, .55),
+            rgba(0, 0, 0, .12));
+    pointer-events: none;
+}
+
+/* ------------------------------
+    PLAY
+------------------------------ */
+
+/* ----- BOTÃO ----- */
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:
+        translate(-50%, -50%);
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: none;
+    background: transparent;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.4rem;
+    z-index: 2;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    text-shadow:
+        0 0 12px rgba(0, 0, 0, .65),
+        0 0 20px rgba(255, 105, 180, .20);
+    transition:
+        transform .3s ease,
+        text-shadow .3s ease,
+        background .3s ease;
+}
+
+/* ----- HOVER ----- */
+
+.video-frame:hover .play-button {
+    transform:
+        translate(-50%, -50%) scale(1.08);
+    background:
+        rgba(0, 0, 0, .28);
+    text-shadow:
+        0 0 16px rgba(0, 0, 0, .7),
+        0 0 28px rgba(255, 105, 180, .30);
+}
+
+/* ------------------------------
+    MODAL
+------------------------------ */
+
+/* ----- MODAL ----- */
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+    background:
+        rgba(0, 0, 0, .88);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    z-index: 999999;
+}
+
+/* ----- ESTADO ATIVO ----- */
+
+.video-modal.active {
+    display: flex;
+}
+
+/* ----- CONTEÚDO ----- */
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, .5),
+        0 0 40px rgba(255, 105, 180, .12);
+}
+
+/* ----- IFRAME ----- */
+
+.video-modal-content iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+/* ----- BOTÃO FECHAR ----- */
+
+.close-video {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background:
+        rgba(255, 255, 255, .95);
+    color: #111;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 10;
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+/* ----- HOVER ----- */
+
+.close-video:hover {
+    transform:
+        scale(1.05);
+}
+
+/* ------------------------------
+   CRÉDITO DE MÍDIA
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.media-credit {
+
+    position: absolute;
+
+    width: min(550px, 28%);
+
+    right: 14.2%;
+
+    bottom: 16rem;
+
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+    z-index: 3;
+
+}
+
+/* ----- TRILHO ----- */
+
+.media-credit-track {
+
+    display: flex;
+
+    width: max-content;
+
+    animation: mediaLoop 15s linear infinite;
+
+}
+
+/* ----- TEXTO ----- */
+
+.media-credit-track span {
+
+    flex-shrink: 0;
+
+    margin-right: 4rem;
+
+    color: #888;
+
+    font-size: 0.75rem;
+
+}
+
+/* ----- ANIMAÇÃO ----- */
+
+@keyframes mediaLoop {
+
+    from {
+
+        transform: translateX(0);
+
+    }
+
+    to {
+
+        transform: translateX(-50%);
+
+    }
+
+}
+
+/* ------------------------------
+    ACESSIBILIDADE
+------------------------------ */
+
+/* ----- REDUÇÃO DE MOVIMENTO ----- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .video-frame,
+    .play-button,
+    .close-video {
+        transition: none;
+    }
+
+    .media-credit-track {
+        animation: none;
+    }
+
+}
+
+
+/* =========================================================
+    ANIMAÇÃO DOS CARDS
+========================================================= */
+
+/* ----- ESTADO INICIAL ----- */
+
+.card {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+/* ----- ESTADO VISÍVEL ----- */
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+    GRÁFICO SCORE
+========================================================= */
+
+/* ----- VALOR DE PROGRESSO ----- */
+
+.progress-value {
+    fill: none;
+    stroke: #d16eff;
+    stroke-width: 12;
+    stroke-linecap: round;
+    filter:
+        drop-shadow(0 0 12px rgba(209, 110, 255, .7));
+}
+
+/* ----- NÚMERO ----- */
+
+.progress-card {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+/* ----- RING ----- */
+
+.progress-ring {
+    display: block;
+}
+
+/* ----- NÚMERO CENTRAL ----- */
+
+.progress-number {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    pointer-events: none;
+}
+
+/* ----- VALOR DO SALÁRIO ----- */
+
+#salaryValue {
+    display: inline;
+}
+
+
+/* =========================================================
+    ANIMAÇÃO DE ESCRITA
+========================================================= */
+
+/* ----- CURSOR ----- */
+
+#heroTitle::after {
+    content: "|";
+    animation:
+        blink .8s infinite;
+}
+
+/* ----- FINALIZAÇÃO ----- */
+
+#heroTitle.typing-done::after {
+    display: none;
+}
+
+/* ----- ANIMAÇÃO ----- */
+
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+    GRÁFICO DE COLUNAS
+========================================================= */
+
+/* ------------------------------
+    ESTRUTURA
+------------------------------ */
+
+/* ----- GRÁFICO ----- */
+
+.bar-chart {
+    display: flex;
+    height: 300px;
+    margin-top: 40px;
+}
+
+/* ----- EIXO Y ----- */
+
+.y-axis {
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #aaa;
+    font-size: 12px;
+}
+
+/* ----- ÁREA DO GRÁFICO ----- */
+
+.chart-area {
+    flex: 1;
+    position: relative;
+    border-left: 1px solid rgba(255, 255, 255, .3);
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+/* ------------------------------
+    GRADE
+------------------------------ */
+
+/* ----- LINHAS ----- */
+
+.grid-line {
+    position: absolute;
+    width: 100%;
+    border-top: 1px dashed rgba(255, 255, 255, .15);
+}
+
+/* ----- LINHA 1 ----- */
+
+.line1 {
+    top: 0;
+}
+
+/* ----- LINHA 2 ----- */
+
+.line2 {
+    top: 20%;
+}
+
+/* ----- LINHA 3 ----- */
+
+.line3 {
+    top: 40%;
+}
+
+/* ----- LINHA 4 ----- */
+
+.line4 {
+    top: 60%;
+}
+
+/* ----- LINHA 5 ----- */
+
+.line5 {
+    top: 80%;
+}
+
+/* ------------------------------
+    BARRAS
+------------------------------ */
+
+/* ----- GRUPO ----- */
+
+.bar-group {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* ----- ITEM ----- */
+
+.bar-item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+}
+
+/* ----- ANO ----- */
+
+.bar-item span {
+    position: absolute;
+    bottom: -30px;
+    color: rgba(255, 255, 255, .7);
+    font-size: 14px;
+}
+
+/* ----- BARRA ----- */
+
+.bar {
+    width: 35px;
+    background:
+        linear-gradient(to top,
+            #7c3aed,
+            #c084fc);
+    border-radius: 8px 8px 0 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+/* ----- HOVER ----- */
+
+.bar:hover {
+    filter: brightness(1.2);
+}
+
+/* ------------------------------
+    ANIMAÇÃO
+------------------------------ */
+
+/* ----- ANIMAÇÃO BASE ----- */
+
+@keyframes growBar {
+
+    from {
+        transform: scaleY(0);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+
+}
+
+/* ----- DELAY BARRA 2 ----- */
+
+.bar-chart.chart-animation .bar-item:nth-child(2) .bar {
+    animation-delay: .3s;
+}
+
+/* ----- DELAY BARRA 3 ----- */
+
+.bar-chart.chart-animation .bar-item:nth-child(3) .bar {
+    animation-delay: .6s;
+}
+
+/* ----- ATIVAÇÃO ----- */
+
+.bar-chart.chart-animation .bar {
+    animation:
+        growBar 1.5s cubic-bezier(.22, 1, .36, 1) forwards;
+}
+
+/* ------------------------------
+    FONTE
+------------------------------ */
+
+/* ----- FONTE DO GRÁFICO ----- */
+
+.chart-source {
+    display: block;
+    margin-top: 2rem;
+    font-size: .7rem;
+    line-height: 1.4;
+    opacity: .6;
+}
+
+
+/* =========================================================
+    RELATO EM REDE SOCIAL
+========================================================= */
+
+/* ------------------------------
+    POST
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.social-post {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 3rem 4rem;
+    background: rgba(255, 255, 255, .025);
+    border: 1px solid rgba(255, 255, 255, .08);
+    border-radius: 18px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .25);
+}
+
+/* ----- LABEL ----- */
+
+.social-label {
+    display: block;
+    margin-bottom: 2rem;
+    font-size: .7rem;
+    letter-spacing: .15em;
+    opacity: .5;
+}
+
+/* ------------------------------
+    CABEÇALHO
+------------------------------ */
+
+/* ----- ESTRUTURA ----- */
+
+.social-header {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    padding-bottom: 1.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, .07);
+}
+
+/* ----- AVATAR ----- */
+
+.social-avatar {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .08);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ----- USUÁRIO ----- */
+
+.social-user {
+    display: flex;
+    flex-direction: column;
+    gap: .15rem;
+}
+
+/* ----- NOME ----- */
+
+.social-user strong {
+    font-size: .95rem;
+}
+
+/* ----- IDENTIFICAÇÃO ----- */
+
+.social-user span {
+    font-size: .75rem;
+    opacity: .45;
+}
+
+/* ----- HORÁRIO ----- */
+
+.social-time {
+    margin-left: auto;
+    font-size: .7rem;
+    opacity: .4;
+}
+
+/* ------------------------------
+    CONTEÚDO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.social-content {
+    max-width: 700px;
+    margin: 2.5rem auto 0;
+}
+
+/* ----- TEXTO ----- */
+
+.social-content p {
+    margin-bottom: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.9;
+    text-align: left;
+    opacity: .88;
+}
+
+/* ------------------------------
+    RODAPÉ
+------------------------------ */
+
+/* ----- ESTRUTURA ----- */
+
+.social-footer {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, .07);
+    font-size: .75rem;
+    opacity: .5;
+}
+
+/* ----- STATUS ----- */
+
+.social-status {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, .05);
+    text-align: center;
+    font-size: .75rem;
+    letter-spacing: .03em;
+    opacity: .4;
+}
+
+/* ----- AVISO ----- */
+
+.social-disclaimer {
+    display: block;
+    margin-top: 2rem;
+    text-align: center;
+    font-size: .65rem;
+    line-height: 1.5;
+    opacity: .35;
+}
+
+
+/* =========================================================
+    RELÓGIO DE IMPACTO
+========================================================= */
+
+/* ------------------------------
+    RELÓGIO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.impact-clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ----- RELÓGIO ----- */
+
+.clock {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    border: 2px solid rgba(209, 110, 255, .35);
+    border-radius: 50%;
+    box-shadow:
+        0 0 40px rgba(209, 110, 255, .08);
+}
+
+/* ------------------------------
+    PONTOS
+------------------------------ */
+
+/* ----- PONTO BASE ----- */
+
+.clock-point {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d16eff;
+    box-shadow:
+        0 0 12px rgba(209, 110, 255, .7);
+}
+
+/* ----- PONTO SUPERIOR ----- */
+
+.point-top {
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----- PONTO DIREITO ----- */
+
+.point-right {
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ----- PONTO INFERIOR ----- */
+
+.point-bottom {
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ----- PONTO ESQUERDO ----- */
+
+.point-left {
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* ------------------------------
+    CENTRO
+------------------------------ */
+
+/* ----- CENTRO ----- */
+
+.clock-center {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    left: 50%;
+    transform:
+        translate(-50%, -50%);
+    border-radius: 50%;
+    background: #d16eff;
+    box-shadow:
+        0 0 18px rgba(209, 110, 255, .8);
+    z-index: 3;
+}
+
+/* ------------------------------
+    PONTEIRO
+------------------------------ */
+
+/* ----- PONTEIRO ----- */
+
+.clock-hand {
+    position: absolute;
+    width: 3px;
+    height: 105px;
+    left: 50%;
+    bottom: 50%;
+    background: #d16eff;
+    transform-origin: bottom center;
+    transform:
+        translateX(-50%) rotate(0deg);
+    border-radius: 3px;
+    box-shadow:
+        0 0 10px rgba(209, 110, 255, .7);
+    z-index: 2;
+    transition:
+        transform 1s linear;
+}
+
+
+/* =========================================================
+    IMPACTO
+========================================================= */
+
+/* ------------------------------
+    ESTRUTURA
+------------------------------ */
+
+/* ----- SEÇÃO ----- */
+
+.impact-section {
+    position: relative;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
+    overflow: hidden;
+}
+
+/* ----- CONTAINER ----- */
+
+.impact-container {
+    width: min(1100px, 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* ------------------------------
+    CABEÇALHO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.impact-header {
+    margin-bottom: 5rem;
+}
+
+/* ----- LABEL ----- */
+
+.impact-label {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: .75rem;
+    letter-spacing: .25em;
+    font-weight: 600;
+    color: #d16eff;
+}
+
+/* ----- TÍTULO ----- */
+
+.impact-header h2 {
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ------------------------------
+    CONTEÚDO
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.impact-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+    width: 100%;
+}
+
+/* ------------------------------
+    INFORMAÇÕES
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.impact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+    text-align: left;
+}
+
+/* ----- LABEL ----- */
+
+.impact-info-label {
+    display: block;
+    margin-bottom: .6rem;
+    font-size: .7rem;
+    letter-spacing: .2em;
+    color: rgba(255, 255, 255, .5);
+}
+
+/* ----- TIMER ----- */
+
+#impactTimer {
+    display: block;
+    font-size: clamp(3.5rem, 7vw, 6rem);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    color: #fff;
+}
+
+/* ----- CONTADOR ----- */
+
+#impactCounter {
+    display: block;
+    font-size: 3rem;
+    line-height: 1;
+    color: #d16eff;
+}
+
+/* ----- EVENTO ----- */
+
+#impactEvent {
+    display: block;
+    margin-top: .6rem;
+    font-size: .9rem;
+    color: rgba(255, 255, 255, .7);
+}
+
+/* ------------------------------
+    AVISO
+------------------------------ */
+
+/* ----- DISCLAIMER ----- */
+
+.impact-disclaimer {
+    max-width: 650px;
+    margin-top: 5rem;
+    font-size: .75rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, .4);
+}
+
+/* ------------------------------
+    ONDAS DE IMPACTO
+------------------------------ */
+
+/* ----- ONDA PRINCIPAL ----- */
+
+.impact-pulse {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(209, 110, 255, .12);
+    border: 3px solid rgba(209, 110, 255, .9);
+    box-shadow:
+        0 0 20px rgba(209, 110, 255, .8),
+        0 0 50px rgba(209, 110, 255, .4);
+    transform:
+        translate(-50%, -50%) scale(0);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 999999;
+}
+
+/* ----- ESTADO ATIVO ----- */
+
+.impact-pulse.active {
+    animation:
+        impactWave 1.2s ease-out forwards;
+}
+
+/* ----- SEGUNDA ONDA ----- */
+
+.impact-pulse-two {
+    opacity: 0;
+}
+
+/* ----- ESTADO ATIVO ----- */
+
+.impact-pulse-two.active {
+    animation:
+        impactWave 1.2s ease-out forwards;
+}
+
+/* ----- ANIMAÇÃO ----- */
+
+@keyframes impactWave {
+
+    0% {
+        transform:
+            translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+    GRÁFICO DE PIZZA
+========================================================= */
+
+/* ----- CONTAINER ----- */
+
+.pie-chart {
+    position: relative;
+    width: 240px;
+    height: 240px;
+    margin: 2rem auto;
+}
+
+/* ----- GRÁFICO ----- */
+
+#pieChart {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* ------------------------------
+    LABELS
+------------------------------ */
+
+/* ----- LABEL BASE ----- */
+
+.pie-label {
+    position: absolute;
+    font-size: .85rem;
+    font-weight: 700;
+    color: #fff;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* ----- LABEL PRINCIPAL ----- */
+
+.pie-label-main {
+    bottom: 30%;
+    left: 45%;
+}
+
+/* ----- LABEL RESTANTE ----- */
+
+.pie-label-rest {
+    top: 30%;
+    right: 45%;
+}
+
+
+/* =========================================================
+    MODAL — MULHER
+========================================================= */
+
+/* ------------------------------
+    ESTRUTURA
+------------------------------ */
+
+/* ----- MODAL ----- */
+
+.woman-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: rgba(8, 4, 15, .75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+    z-index: 9999;
+}
+
+/* ----- ESTADO ATIVO ----- */
+
+.woman-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ----- CONTEÚDO ----- */
+
+.woman-modal-content {
+    position: relative;
+    display: grid;
+    grid-template-columns:
+        minmax(250px, 380px) 1fr;
+    width: min(900px, 100%);
+    max-height: 85vh;
+    overflow: hidden;
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, .09),
+            rgba(255, 255, 255, .025));
+    border:
+        1px solid rgba(255, 255, 255, .12);
+    border-radius: 28px;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, .45);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transform:
+        translateY(20px) scale(.97);
+    transition:
+        transform .4s cubic-bezier(.22, 1, .36, 1);
+}
+
+/* ----- ENTRADA DO CONTEÚDO ----- */
+
+.woman-modal.active .woman-modal-content {
+    transform:
+        translateY(0) scale(1);
+}
+
+/* ------------------------------
+    IMAGEM
+------------------------------ */
+
+/* ----- IMAGEM ----- */
+
+.woman-modal-content>img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    object-fit: cover;
+    background:
+        linear-gradient(135deg,
+            rgba(130, 50, 190, .12),
+            rgba(20, 10, 30, .5));
+}
+
+/* ------------------------------
+    INFORMAÇÕES
+------------------------------ */
+
+/* ----- CONTAINER ----- */
+
+.woman-modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+}
+
+/* ----- TÍTULO ----- */
+
+.woman-modal-info h2 {
+    margin-bottom: 1.2rem;
+    font-size:
+        clamp(1.8rem, 3vw, 2.8rem);
+}
+
+/* ----- TEXTO ----- */
+
+.woman-modal-info p {
+    line-height: 1.7;
+    color:
+        rgba(255, 255, 255, .75);
+}
+
+/* ------------------------------
+    FECHAMENTO
+------------------------------ */
+
+/* ----- BOTÃO FECHAR ----- */
+
+.woman-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border:
+        1px solid rgba(255, 255, 255, .15);
+    border-radius: 50%;
+    background:
+        rgba(0, 0, 0, .35);
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    z-index: 5;
+    transition:
+        background .25s ease,
+        transform .25s ease;
+}
+
+/* ----- HOVER ----- */
+
+.woman-modal-close:hover {
+    background:
+        rgba(255, 255, 255, .12);
+    transform:
+        rotate(90deg);
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* -----------------------------------------------------
+       NAVBAR
+    ----------------------------------------------------- */
+
+    .navbar {
+        padding: .9rem 5%;
+    }
+
+    .navbar nav {
+        gap: 1.2rem;
+    }
+
+    .navbar nav a {
+        font-size: .85rem;
+    }
+
+
+    /* -----------------------------------------------------
+       ÍCONE DO PROJETO
+    ----------------------------------------------------- */
+
+    .project-icon img {
+        width: 180px;
+        height: 180px;
+        top: 15px;
+        left: 3%;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        padding: 5rem 6%;
+    }
+
+    .hero-content {
+        gap: 3rem;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(2.8rem, 7vw, 4.5rem);
+    }
+
+    .hero-text p {
+        font-size: 1.05rem;
+    }
+
+
+    /* -----------------------------------------------------
+       SEÇÕES
+    ----------------------------------------------------- */
+
+    .section {
+        padding: 6rem 6%;
+    }
+
+
+    /* -----------------------------------------------------
+       CARDS
+    ----------------------------------------------------- */
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* -----------------------------------------------------
+       CARROSSEL
+    ----------------------------------------------------- */
+
+    .carousel-slot {
+        flex-basis: 320px;
+        width: 320px;
+    }
+
+    .carousel-card {
+        width: 320px;
+        flex-basis: 320px;
+    }
+
+
+    /* -----------------------------------------------------
+       VÍDEO
+    ----------------------------------------------------- */
+
+    .video-frame {
+        max-width: 500px;
+    }
+
+
+    /* -----------------------------------------------------
+       GRÁFICO
+    ----------------------------------------------------- */
+
+    .bar-group {
+        gap: 30px;
+    }
+
+
+    /* -----------------------------------------------------
+       RELATO
+    ----------------------------------------------------- */
+
+    .social-post {
+        padding: 2.5rem 3rem;
+    }
+
+
+    /* -----------------------------------------------------
+       IMPACTO
+    ----------------------------------------------------- */
+
+    .impact-content {
+        gap: 4rem;
+    }
+
+    .clock {
+        width: 240px;
+        height: 240px;
+    }
+
+    .clock-hand {
+        height: 90px;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL MULHER
+    ----------------------------------------------------- */
+
+    .woman-modal-content {
+        grid-template-columns:
+            minmax(220px, 320px) 1fr;
+    }
+
+    .woman-modal-info {
+        padding: 2.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    /* -----------------------------------------------------
+       GERAL
+    ----------------------------------------------------- */
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-size: auto 100%;
+        background-position: top center;
+    }
+
+    /* -----------------------------------------------------
+   NAVBAR
+----------------------------------------------------- */
+
+    /* ----- ESTRUTURA ----- */
+
+    .navbar {
+
+        position: sticky;
+
+        top: 0;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        gap: 1rem;
+
+        padding: .8rem 1rem;
+
+    }
+
+
+    /* ----- LOGO ----- */
+
+    .logo {
+
+        font-size: .95rem;
+
+        white-space: nowrap;
+
+    }
+
+
+    /* ----- BOTÃO MENU MOBILE ----- */
+
+    .menu-toggle {
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        width: 42px;
+
+        height: 42px;
+
+        padding: 0;
+
+        border: 1px solid rgba(255, 255, 255, .15);
+
+        border-radius: 10px;
+
+        background: rgba(255, 255, 255, .06);
+
+        color: white;
+
+        font-size: 1.5rem;
+
+        line-height: 1;
+
+        cursor: pointer;
+
+    }
+
+
+    /* ----- NAVEGAÇÃO ----- */
+
+    .navbar nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: 100%;
+
+        left: 1rem;
+
+        right: 1rem;
+
+        flex-direction: column;
+
+        gap: .2rem;
+
+        padding: .5rem;
+
+        border: 1px solid rgba(255, 255, 255, .1);
+
+        border-radius: 14px;
+
+        background: rgba(9, 9, 9, .96);
+
+        backdrop-filter: blur(20px);
+
+        -webkit-backdrop-filter: blur(20px);
+
+    }
+
+
+    /* ----- MENU ABERTO ----- */
+
+    .navbar nav.active {
+
+        display: flex;
+
+    }
+
+
+    /* ----- LINKS ----- */
+
+    .navbar nav a {
+
+        width: 100%;
+
+        padding: .9rem 1rem;
+
+        border-radius: 10px;
+
+        color: white;
+
+        text-decoration: none;
+
+        font-size: .85rem;
+
+    }
+
+
+    /* ----- HOVER ----- */
+
+    .navbar nav a:hover {
+
+        background: rgba(255, 255, 255, .08);
+
+    }
+
+    /* -----------------------------------------------------
+       ÍCONE DO PROJETO
+    ----------------------------------------------------- */
+
+    .project-icon img {
+        width: 110px;
+        height: 110px;
+
+        top: 12px;
+        left: 50%;
+
+        transform: translateX(-50%);
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        min-height: auto;
+        min-height: 100svh;
+
+        padding: 7rem 1.25rem 5rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 2.5rem;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        margin-bottom: 1.2rem;
+
+        font-size: clamp(2.4rem, 12vw, 4rem);
+
+        line-height: 1.05;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       SEÇÕES
+    ----------------------------------------------------- */
+
+    .section {
+        padding: 5rem 1.25rem;
+    }
+
+    .section h2 {
+        margin-bottom: 2.5rem;
+
+        font-size: clamp(1.8rem, 9vw, 2.6rem);
+        line-height: 1.1;
+    }
+
+
+    /* -----------------------------------------------------
+       CARDS
+    ----------------------------------------------------- */
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 1.25rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+
+        border-radius: 20px;
+    }
+
+    .card:hover {
+        transform: none;
+    }
+
+    .card h3 {
+        font-size: 1.15rem;
+    }
+
+    .card p {
+        font-size: .95rem;
+        line-height: 1.7;
+    }
+
+
+    /* -----------------------------------------------------
+       CARROSSEL
+    ----------------------------------------------------- */
+
+    .carousel {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .carousel-viewport {
+        height: 500px;
+
+        overflow: hidden;
+    }
+
+    .carousel-track {
+        height: 500px;
+    }
+
+    .carousel-slot {
+        flex-basis: 290px;
+
+        width: 290px;
+        height: 500px;
+
+        margin-right: 1rem;
+    }
+
+    .carousel-card {
+        width: 290px;
+        height: 480px;
+
+        flex-basis: 290px;
+
+        border-radius: 22px;
+    }
+
+    .carousel-card img {
+        height: 280px;
+    }
+
+    .carousel-card h3 {
+        padding:
+            1rem 1rem .5rem;
+
+        font-size: 1.15rem;
+    }
+
+    .carousel-card.active h3 {
+        padding-top: 1.1rem;
+
+        font-size: 1.25rem;
+    }
+
+    .carousel-card p {
+        padding:
+            .2rem 1rem 1rem;
+
+        font-size: .85rem;
+        line-height: 1.55;
+    }
+
+    .carousel-card .carousel-source {
+        margin:
+            auto 1rem 1rem;
+    }
+
+    /* -----------------------------------------------------
+   CONTROLES DO CARROSSEL
+----------------------------------------------------- */
+
+    .carousel-controls {
+        gap: .7rem;
+        margin-top: .8rem;
+    }
+
+    .carousel-controls button {
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 0;
+
+        font-size: 1.5rem;
+        line-height: 1;
+
+        text-align: center;
+    }
+
+    /* ----- AJUSTE DAS SETAS ----- */
+
+    #carousel-prev span,
+    #carousel-next span {
+
+        position: relative;
+
+        top: -6px;
+
+    }
+
+
+    /* ----- CONTADOR ----- */
+
+    .carousel-counter {
+        min-width: 55px;
+        font-size: .85rem;
+        line-height: 1;
+    }
+
+    /* -----------------------------------------------------
+       AVISO DE IA
+    ----------------------------------------------------- */
+
+    .ai-disclaimer {
+        padding: 0 1rem;
+
+        font-size: .62rem;
+
+        white-space: normal;
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       CURIOSIDADES
+    ----------------------------------------------------- */
+
+    #curiosidades {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    #curiosidades h2 {
+        margin-bottom: 2.5rem;
+
+        font-size: clamp(1.9rem, 9vw, 2.7rem);
+    }
+
+
+    /* -----------------------------------------------------
+       SOBRE
+    ----------------------------------------------------- */
+
+    .about {
+        width: 100%;
+    }
+
+    .about p {
+        font-size: .95rem;
+        line-height: 1.75;
+    }
+
+
+    /* -----------------------------------------------------
+       VÍDEO
+    ----------------------------------------------------- */
+
+    .video-frame {
+        width: 100%;
+
+        max-width: none;
+
+        border-radius: 20px;
+
+        box-shadow:
+            0 15px 40px rgba(255, 105, 180, .15);
+    }
+
+    .video-frame:hover {
+        transform: none;
+    }
+
+    .play-button {
+        width: 64px;
+        height: 64px;
+
+        font-size: 2rem;
+    }
+
+    .video-frame:hover .play-button {
+        transform:
+            translate(-50%, -50%);
+        background: transparent;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL DO VÍDEO
+    ----------------------------------------------------- */
+
+    .video-modal {
+        padding: 1rem;
+    }
+
+    .video-modal-content {
+        width: 100%;
+
+        border-radius: 12px;
+    }
+
+    .close-video {
+        top: 8px;
+        right: 8px;
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    /* -----------------------------------------------------
+       CRÉDITO DE MÍDIA
+    ----------------------------------------------------- */
+
+    .media-credit {
+        width: 90%;
+
+        right: 5%;
+        bottom: 7rem;
+
+        text-align: center;
+    }
+
+    .media-credit-track span {
+        font-size: .65rem;
+
+        margin-right: 2rem;
+    }
+
+
+    /* -----------------------------------------------------
+       GRÁFICO DE SCORE
+    ----------------------------------------------------- */
+
+    .progress-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .progress-number {
+        font-size: 1.7rem;
+    }
+
+
+    /* -----------------------------------------------------
+       GRÁFICO DE COLUNAS
+    ----------------------------------------------------- */
+
+    .bar-chart {
+        height: 250px;
+
+        margin-top: 30px;
+    }
+
+    .y-axis {
+        width: 32px;
+
+        font-size: 10px;
+    }
+
+    .bar-group {
+        gap: 20px;
+    }
+
+    .bar {
+        width: 28px;
+    }
+
+    .bar-item span {
+        bottom: -25px;
+
+        font-size: 12px;
+    }
+
+    .chart-source {
+        margin-top: 1.5rem;
+
+        font-size: .65rem;
+    }
+
+
+    /* -----------------------------------------------------
+       RELATO EM REDE SOCIAL
+    ----------------------------------------------------- */
+
+    .social-post {
+        width: 100%;
+
+        padding: 1.5rem;
+
+        border-radius: 16px;
+    }
+
+    .social-label {
+        margin-bottom: 1.5rem;
+
+        font-size: .62rem;
+    }
+
+    .social-header {
+        gap: .7rem;
+
+        padding-bottom: 1.2rem;
+    }
+
+    .social-avatar {
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+    }
+
+    .social-user strong {
+        font-size: .85rem;
+    }
+
+    .social-user span {
+        font-size: .68rem;
+    }
+
+    .social-time {
+        font-size: .62rem;
+    }
+
+    .social-content {
+        margin-top: 1.8rem;
+    }
+
+    .social-content p {
+        margin-bottom: 1.3rem;
+
+        font-size: .92rem;
+        line-height: 1.75;
+    }
+
+    .social-footer {
+        flex-wrap: wrap;
+
+        gap: 1rem;
+
+        margin-top: 2rem;
+        padding-top: 1.2rem;
+    }
+
+    .social-status {
+        margin-top: 1.5rem;
+        padding-top: 1.2rem;
+
+        font-size: .68rem;
+    }
+
+    .social-disclaimer {
+        margin-top: 1.5rem;
+
+        font-size: .6rem;
+    }
+
+
+    /* -----------------------------------------------------
+       RELÓGIO DE IMPACTO
+    ----------------------------------------------------- */
+
+    .impact-clock {
+        width: 100%;
+    }
+
+    .clock {
+        width: 210px;
+        height: 210px;
+    }
+
+    .clock-point {
+        width: 7px;
+        height: 7px;
+    }
+
+    .point-top {
+        top: 14px;
+    }
+
+    .point-right {
+        right: 14px;
+    }
+
+    .point-bottom {
+        bottom: 14px;
+    }
+
+    .point-left {
+        left: 14px;
+    }
+
+    .clock-center {
+        width: 12px;
+        height: 12px;
+    }
+
+    .clock-hand {
+        height: 78px;
+    }
+
+
+    /* -----------------------------------------------------
+       IMPACTO
+    ----------------------------------------------------- */
+
+    .impact-section {
+        min-height: auto;
+
+        padding:
+            5rem 1.25rem;
+    }
+
+    .impact-container {
+        width: 100%;
+    }
+
+    .impact-header {
+        margin-bottom: 3.5rem;
+    }
+
+    .impact-label {
+        font-size: .65rem;
+
+        letter-spacing: .2em;
+    }
+
+    .impact-header h2 {
+        font-size: clamp(2rem, 10vw, 3rem);
+
+        line-height: 1.1;
+    }
+
+    .impact-content {
+        flex-direction: column;
+
+        gap: 3.5rem;
+    }
+
+    .impact-info {
+        width: 100%;
+
+        align-items: center;
+
+        gap: 2.5rem;
+
+        text-align: center;
+    }
+
+    #impactTimer {
+        font-size: clamp(2.8rem, 12vw, 4.5rem);
+    }
+
+    #impactCounter {
+        font-size: 2.4rem;
+    }
+
+    #impactEvent {
+        font-size: .8rem;
+    }
+
+    .impact-disclaimer {
+        width: 100%;
+
+        margin-top: 3.5rem;
+
+        font-size: .68rem;
+        line-height: 1.6;
+    }
+
+
+    /* -----------------------------------------------------
+       GRÁFICO DE PIZZA
+    ----------------------------------------------------- */
+
+    .pie-chart {
+        width: 210px;
+        height: 210px;
+
+        margin: 1.5rem auto;
+    }
+
+    .pie-label {
+        font-size: .75rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL MULHER
+    ----------------------------------------------------- */
+
+    .woman-modal {
+        padding: .75rem;
+    }
+
+    .woman-modal-content {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        max-height: 92vh;
+
+        border-radius: 20px;
+
+        overflow-y: auto;
+    }
+
+    .woman-modal-content>img {
+        width: 100%;
+        height: 280px;
+
+        min-height: 280px;
+
+        flex-shrink: 0;
+    }
+
+    .woman-modal-info {
+        padding: 1.5rem;
+    }
+
+    .woman-modal-info h2 {
+        margin-bottom: 1rem;
+
+        font-size: 1.8rem;
+    }
+
+    .woman-modal-info p {
+        font-size: .9rem;
+
+        line-height: 1.7;
+    }
+
+    .woman-modal-close {
+        top: .7rem;
+        right: .7rem;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 1.4rem;
+    }
+
+    .woman-modal-close:hover {
+        transform: none;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE PEQUENO
+========================================================= */
+
+@media (max-width: 380px) {
+
+    /* -----------------------------------------------------
+       NAVBAR
+    ----------------------------------------------------- */
+
+    .navbar {
+        padding:
+            .7rem .75rem;
+    }
+
+    .logo {
+        font-size: .85rem;
+    }
+
+    .navbar nav {
+        gap: .6rem;
+    }
+
+    .navbar nav a {
+        font-size: .7rem;
+    }
+
+
+    /* -----------------------------------------------------
+       HERO
+    ----------------------------------------------------- */
+
+    .hero {
+        padding:
+            6rem 1rem 4rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-text p {
+        font-size: .9rem;
+    }
+
+
+    /* -----------------------------------------------------
+       SEÇÕES
+    ----------------------------------------------------- */
+
+    .section {
+        padding:
+            4rem 1rem;
+    }
+
+
+    /* -----------------------------------------------------
+       CARROSSEL
+    ----------------------------------------------------- */
+
+    .carousel-slot {
+        flex-basis: 270px;
+
+        width: 270px;
+    }
+
+    .carousel-card {
+        width: 270px;
+
+        flex-basis: 270px;
+    }
+
+    .carousel-card img {
+        height: 265px;
+    }
+
+
+    /* -----------------------------------------------------
+       GRÁFICO
+    ----------------------------------------------------- */
+
+    .bar-group {
+        gap: 14px;
+    }
+
+    .bar {
+        width: 24px;
+    }
+
+
+    /* -----------------------------------------------------
+       RELATO
+    ----------------------------------------------------- */
+
+    .social-post {
+        padding: 1.25rem;
+    }
+
+    .social-time {
+        display: none;
+    }
+
+
+    /* -----------------------------------------------------
+       IMPACTO
+    ----------------------------------------------------- */
+
+    .clock {
+        width: 190px;
+        height: 190px;
+    }
+
+    .clock-hand {
+        height: 70px;
+    }
+
+    #impactTimer {
+        font-size: 2.7rem;
+    }
+
+    #impactCounter {
+        font-size: 2.1rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL
+    ----------------------------------------------------- */
+
+    .woman-modal-content>img {
+        height: 240px;
+        min-height: 240px;
+    }
+
+    .woman-modal-info {
+        padding: 1.25rem;
+    }
+
+}
